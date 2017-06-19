@@ -1,0 +1,4 @@
+It will add a '.git' directory which means create a repository.
+Why? Because I need version control.
+
+Staging area is a middle directoty you can think more about what you commit.
