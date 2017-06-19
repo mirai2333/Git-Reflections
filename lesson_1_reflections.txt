@@ -1,0 +1,13 @@
+I can clearly see what was changed.
+That help me find where is wrong.
+
+You can use whatever you want by version control,like  game saves.
+
+If you manual sublime your file,you will get a clearly logic relationship.
+If you don't the versions man be too many to read.
+
+Because they are made for diffrient people?
+
+"git log" will list the commits and "git dff [id1] [id2]" will compare their diffrients!
+
+Because I can return to the time when it's right.
