@@ -5,3 +5,6 @@ Staging area is a middle directoty you can think more about what you commit.
 
 Just change something in order to find whether my
  default textedit was changed!
+
+ When you change the file you need run "git add filename" to add the file you changed
+ to the stage.
