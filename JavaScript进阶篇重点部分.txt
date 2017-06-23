@@ -1,0 +1,84 @@
+事件：
+    是JavaScript侦测到的行为，网页中的每个元素都可以产生一些事件
+
+常用：
+    - onclick            鼠标单击事件
+    - onload             网页导入
+        网页加载完成后发生
+    - onmouseover        鼠标经过事件
+    - onmouseout         鼠标移出事件
+
+非常用：
+    - *onchange          文本框内容改变事件
+    - onselect           文本框内容被选中事件
+    - *onfocus           光标聚集
+    - *onblur            光标离开
+    - onunload           关闭网页
+        顾名思义
+        页面刷新时也会触发
+
+JavaScript内置对象：
+    属性、方法
+    parseInt()
+        字符串类型转换成整型
+
+    new Array()
+        arr.length
+        arr.concat(array1,array2,....)
+            链接数组，返回原数组进行链接之后的副本，不会改变原数组
+        arr.join(分隔符)
+            把数组用指定的分隔符连接在一起形成字符串，如果未指定，默认用逗号
+        arr.reverse()
+            颠倒数组的顺序，会改变数组本身
+        arr.slice(start,end)
+            从已有数组中返回指定元素
+            start从0开始，若为负值则从后往前数
+            不包含end所指的元素，如果end为负值也表示从后往前计数
+            不会修改数组，会返回一个子数组
+        arr.sort(方法函数)
+            如果不指定方法函数，则按unicode码顺序排列
+            方法函数要比较两个值，然后返回一个用于说明这两个值相对顺序的数字（从小到大）
+                若返回值<=-1，表示A在B之前
+                若返回值>-1&&<1，表示A和B顺序相同
+                若返回值>1，表示A在B之后
+            方法函数不带括号！！
+
+    new Date()
+        <时间对象>.getFullYear()
+        <时间对象>.getDay()
+            返回星期，用0~6表示，0表示星期日
+        <时间对象>.get/setTime()
+            获取或者设置时间，单位毫秒数
+
+    var str
+        str.length
+        str.toUpperCase()
+        str.toLowerCase()
+        str.charAt(index)
+            返回某一位置的字符，是长度为1的的字符串
+        str.indexOf(substring,starpos)
+            返回指定字符串substring的位置
+            starpos表示开始检索的位置，可选参数
+            如果有不止一个结果，就返回第一个位置
+            没有结果返回-1
+        str.split(separator,limit)
+            separator表示按什么分割，如果按""这样的空字符分割，会把每个字符都分开
+            limit表示分割的最大数组数
+            返回值是一个数组，数组元素就是分割开的字符串
+        str.substring(starPos,stopPos)
+            starPos表示开始位置，从0开始，包括starPos的字符
+            stopPos可选参数，不包括stopPos的字符
+            如果两个参数相等会返回""空字符串
+            如果starPos大于stopPos，会在一开始交换二者位置
+        str.substr(starPos,length)
+            starPos如果为负数则从后往前计数，-1表示最后一个字符，若为负数，且绝对值大于长度，那么starPos置为0
+
+    Math
+        Math.ceil()
+            向上取整
+        Math.floor()
+            向下取整
+        Math.round(x)
+            取距离x最近的整数，两边相等时取大的
+        Math.random()
+            0~1的随机数
