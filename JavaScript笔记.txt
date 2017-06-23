@@ -1,0 +1,52 @@
+学过的函数：
+
+  - alert(str)
+        弹出一个警告框，str是警告内容，只有“确定”按钮。
+
+  - confirm(str)
+        弹出一个确认框，str是需要用户确认的内容，有“确定”和“取消”按钮。
+
+  - prompt(str1,str2)
+        str1：显示提示内容    str2：显示文本框默认显示的文本。
+
+  - window.open([URL],[name],[参数字符串])
+        打开一个窗口
+        URL：打开的窗口的URL
+        name：打开窗口的名称
+            _blank：在新窗口打开
+            _self：在当前窗口打开
+            _top："框架网页中在上部窗口中显示目标网页"
+        参数字符串：top,left,width,height,menubar,toolbar,scrollbars,status.
+
+  - window.close()
+        关闭本窗口
+    Object.close()
+        关闭特定窗口
+        Object表示窗口对象，window.open([URL],[name],[str])获取到的对象
+
+  - Object.removeAttribute()
+        删除HTML元素的指定属性
+
+  - document.getElementById('ID')
+  - document.write(str)
+        似乎必须在HTML文件里写才行
+        输出<br/>换行的时候必须用 "" 括起来！！
+
+  - Object.innerHTML
+        获取或者改变HTML元素的内容
+        Object表示用getElementById('ID')获取到的HTML元素对象
+
+  - Object.style.property=new style
+        改变HTML元素样式
+        Object表示HTML元素样式
+
+  - Object.className
+        获取或者改变HTML元素的class属性(即样式名称)
+
+
+JavaScript进阶
+
+  - new Array()
+        创建一个数组，数组长度是可变的
+        myarray.length
+            获得数组长度，数组长度可被赋值改变
