@@ -4,7 +4,7 @@
 常用：
     - onclick            鼠标单击事件
     - onload             网页导入
-        网页加载完成后发生
+        网页加载完成后发生，写在body里面
     - onmouseover        鼠标经过事件
     - onmouseout         鼠标移出事件
 
@@ -82,3 +82,44 @@ JavaScript内置对象：
             取距离x最近的整数，两边相等时取大的
         Math.random()
             0~1的随机数
+
+window对象：指当前的浏览器窗口
+
+    setInterval(代码,交互时间);
+        按“交互时间”间隔，执行“代码”
+        交互时间按ms计，1s=1000ms
+        返回值是一个可被clearInterval()接受，从而取消循环的值
+    clearInterval(id_of_setInterval)
+        id_of_setInterval，就是上面说的传过来的ID值
+
+    setTimeout(代码,延迟时间)
+        延迟一定时间后执行代码，时间按毫秒计
+    clearTimeout(ID_OF_setTimeout)
+
+    History对象：记录了用户曾经浏览过的页面（URL），可以实现浏览器前进与后退功能
+        从窗口打开的那一刻开始记录，每个浏览器窗口，每个标签乃至每个框架都有自己的history对象与特定的window对象关联
+
+        window.history.[属性|方法]
+            windows可以省略
+            length
+                返回浏览器历史列表中的URL数量
+            back()
+                加载history列表中的前一个URL
+                可以在<a></a>中用herf="JavaScript:back()"调用
+            forward()
+                加载history列表中的下一个URL
+            go()
+                加载history列表中的某个具体页面
+
+    Location对象：获取或设置窗体的URL，并且可用于解析URL
+    Navigator对象：包含有关浏览器的信息，通常用于检测浏览器与操作系统的版本
+        navigator.userAgent
+            返回用户代理头的字符串表示（就是包括浏览器版本信息等的字符串）
+    screen对象：用于获取用户的屏幕信息
+        window.screen.属性
+            屏幕分辨率的宽高，单位以像素计
+                screen.width
+                screen.height
+            访问者屏幕的宽高，以像素计，比如减去任务栏后的
+                screen.availWidth
+                screen.availHeight
