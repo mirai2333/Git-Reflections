@@ -123,3 +123,83 @@ window对象：指当前的浏览器窗口
             访问者屏幕的宽高，以像素计，比如减去任务栏后的
                 screen.availWidth
                 screen.availHeight
+
+DOM对象：
+        document.getElementsByName(name)
+            注意：Elements，s，s，s，s
+            通过元素的name属性查询元素。
+            因为name属性可能不唯一所以返回的是一个元素数组
+            因而就有length属性，可以查询长度
+            需要通过与数组类似的方式查询具体的元素
+        document.getElementsByTagName(TagName)
+            TagName肯定不是唯一的所以同上……
+            还有：Elements，s，s，s，s
+        document.createElement('Tagname')
+            创建一个新元素
+        document.createTextNode(data)
+            创建一个文本节点
+
+        elementNode.getAttribute(name)
+            elementNode就是获取的HTML元素
+            name是想要查询的元素的属性名字
+        elementNode.setAttribute(name,value)
+            如果不存在指定的属性，那么将创建一个新属性
+
+        nodeName,nodeType,nodeValue
+            是节点的三个重要属性
+
+        elementNode.childNodes
+            访问选定元素节点下的所有子节点列表，是一个数组
+            如果没有子节点，返回不包含节点的NodeList
+            IE不会设置空文本节点
+            node.parentNode
+                获取指定节点node的父节点
+            node.firstChild
+            node.lastChild
+                node表示节点列表的父节点的元素，并不是列表数组！！！！！
+                返回节点列表的第一个/最后一个子节点
+                与elementNode.childNodes[0/最后一个]相同
+                如果没有子节点，则返回null
+            node.nextSibling
+            node.previousSibling
+                返回某个节点之后的或之前的节点，处于同一树层级中
+                注意计算空节点
+                若无节点则返回null
+            node.appendChlid(newnode)
+                newnode，应该是JavaScript内创建的HTML元素
+            node.insertBefore(newnode,node)
+                在指定node之前插入newnode
+            node.removeChild(Chlidnode)
+                node表示父节点，且用node.childNodes.length做for条件时，随着删除，这个长度会变化，第一个位置一直是有元素的！！！！！
+                删除成功的话会返回被删除的节点
+            node.replace(newnode,oldnode);
+                把oldnode换为newnode，node为父节点
+
+
+        对于IE9+、Chrome、Firefox、Opera 以及 Safari：
+
+        •  window.innerHeight - 浏览器窗口的内部高度
+        •  window.innerWidth - 浏览器窗口的内部宽度
+
+        对于 Internet Explorer 8、7、6、5：
+
+        •  document.documentElement.clientHeight表示HTML文档所在窗口的当前高度。
+        •  document.documentElement.clientWidth表示HTML文档所在窗口的当前宽度。
+
+        Document对象的body属性对应HTML文档的<body>标签
+        •  document.body.clientHeight
+        •  document.body.clientWidth
+
+        在不同浏览器都实用的 JavaScript 方案：
+        var w= document.documentElement.clientWidth
+              || document.body.clientWidth;
+        var h= document.documentElement.clientHeight
+              || document.body.clientHeight;
+
+        scrollHeight和scrollWidth，获取网页
+        "内容"
+        "内容"
+        "内容"
+        高度和宽度。
+
+        offsetHeight = clientHeight + 滚动条 + 边框。
